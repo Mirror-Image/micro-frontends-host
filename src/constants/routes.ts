@@ -1,9 +1,9 @@
 export const APP_ROUTES = {
   root: '/',
   products: {
-    root: '/products'
+    root: '/products',
   },
   clients: {
-    root: '/clients'
+    root: '/clients',
   },
 }

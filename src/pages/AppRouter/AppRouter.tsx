@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { APP_ROUTES } from '../../constants/routes.ts'
-import { AppLayout } from '../../components/AppLayout/AppLayout.tsx'
-import {NotFoundPage} from '../NotFoundPage/NotFoundPage.tsx'
+import { APP_ROUTES } from 'constants/routes'
+import { AppLayout } from 'components/AppLayout/AppLayout'
+
+import { NotFoundPage } from '../NotFoundPage/NotFoundPage'
 
 export const AppRouter = () => (
   <RouterProvider
@@ -16,9 +17,9 @@ export const AppRouter = () => (
               const { default: RemoteA } = await import('remoteA/App')
 
               return {
-                Component: RemoteA
+                Component: RemoteA,
               }
-            }
+            },
           },
           {
             path: APP_ROUTES.products.root,
@@ -26,11 +27,11 @@ export const AppRouter = () => (
               const { default: RemoteB } = await import('remoteB/App')
 
               return {
-                Component: RemoteB
+                Component: RemoteB,
               }
-            }
+            },
           },
-        ]
+        ],
       },
       {
         path: '*',
